@@ -871,7 +871,8 @@
    DATA LATIHAN (20 paket)
    ========================================================= */
 const latihan = [
-  { no: 1,  judul: "Penginderaan Jauh",           topik: "Konsep, Jenis & Citra Satelit",  ikon: "🛰️", soal: 20, terbuka: true  },
+  { no: 1,  judul: "Penginderaan Jauh",           topik: "Konsep, Jenis & Citra Satelit",  ikon: "🛰️", soal: 20, terbuka: true,
+    link: "https://maedafarhansyah-pixel.github.io/latihansoalgeo/inderaja_1.html" },
   { no: 2,  judul: "Peta & Kartografi",           topik: "Dasar Pemetaan, Skala & Proyeksi", ikon: "🗺️", soal: 20, terbuka: false },
   { no: 3,  judul: "SIG (Sistem Informasi Geografi)", topik: "Analisis Spasial & Data",     ikon: "🖥️", soal: 20, terbuka: false },
   { no: 4,  judul: "Jagat Raya & Tata Surya",     topik: "Astronomi Dasar",                ikon: "🌌", soal: 20, terbuka: false },
@@ -930,7 +931,11 @@ latihan.forEach(item => {
 let currentLatihan = null;
 
 function handleCardClick(item) {
-  if (item.terbuka) {
+  if (item.terbuka && item.link) {
+    // Buka tautan latihan di tab baru
+    window.open(item.link, '_blank');
+    showToast(`Membuka Latihan ${item.no}: ${item.judul}...`, true);
+  } else if (item.terbuka) {
     showToast(`Membuka Latihan ${item.no}: ${item.judul}...`, true);
   } else {
     openModal(item);
