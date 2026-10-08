@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#1e3a5f">
-<title>TKA — Tes Kemampuan Akademik | Pengindraan Jauh</title>
+<title>Simulasi TKA Geografi — SMAN 3 Kasongan</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
@@ -1265,14 +1265,9 @@
       <div class="brand">
         <div class="brand-logo">🎓</div>
         <div class="brand-text">
-          <div class="l1">GeoLab</div>
-          <div class="l2">Sistem Ujian</div>
+          <div class="l1">SMAN 3 Kasongan</div>
+          <div class="l2">Simulasi TKA Geografi — Pengindraan Jauh</div>
         </div>
-      </div>
-      <div class="header-divider"></div>
-      <div class="header-title">
-        <div class="t1">Tes Kemampuan Akademik</div>
-        <div class="t2">Geografi — Pengindraan Jauh</div>
       </div>
     </div>
   </header>
@@ -1341,7 +1336,7 @@
           <ol class="instructions">
             <li>Isi identitas peserta dengan lengkap dan benar sebelum memulai ujian.</li>
             <li>Ujian terdiri dari <b>30 soal pilihan ganda</b> yang dipilih secara acak dari bank soal.</li>
-            <li>Waktu pengerjaan adalah <b>60 menit</b>. Waktu berjalan otomatis setelah ujian dimulai.</li>
+            <li>Waktu pengerjaan adalah <b>60 menit</b> (± 2 menit per soal). Waktu berjalan otomatis setelah ujian dimulai.</li>
             <li>Pilih salah satu jawaban yang paling tepat dengan mengklik opsi A, B, C, D, atau E.</li>
             <li>Gunakan tombol <b>Ragu-ragu</b> untuk menandai soal yang ingin ditinjau kembali.</li>
             <li>Gunakan panel <b>Navigasi Soal</b> untuk berpindah antar soal secara cepat.</li>
@@ -1354,7 +1349,7 @@
       <button class="btn-start" onclick="startExam()">▶ Mulai Ujian</button>
 
       <div class="start-footer">
-        Sistem Ujian GeoLab © 2025 — Pastikan koneksi stabil selama ujian berlangsung.
+        SMAN 3 Kasongan © 2025 — Pastikan koneksi stabil selama ujian berlangsung.
         <br>
         <button class="link-guru" onclick="openKey()">🔑 Akses Guru</button>
       </div>
@@ -1369,13 +1364,13 @@
       <div class="brand">
         <div class="brand-logo">🎓</div>
         <div class="brand-text">
-          <div class="l1">GeoLab</div>
-          <div class="l2">Sistem Ujian</div>
+          <div class="l1">SMAN 3 Kasongan</div>
+          <div class="l2">Simulasi TKA Geografi — Pengindraan Jauh</div>
         </div>
       </div>
       <div class="header-divider"></div>
       <div class="header-title">
-        <div class="t1">Tes Kemampuan Akademik</div>
+        <div class="t1">Peserta Ujian</div>
         <div class="t2" id="headerStudent">—</div>
       </div>
       <button class="nav-toggle-btn" onclick="openDrawer()">📋 Soal</button>
@@ -1452,14 +1447,9 @@
       <div class="brand">
         <div class="brand-logo">🎓</div>
         <div class="brand-text">
-          <div class="l1">GeoLab</div>
-          <div class="l2">Sistem Ujian</div>
+          <div class="l1">SMAN 3 Kasongan</div>
+          <div class="l2">Simulasi TKA Geografi — Pengindraan Jauh</div>
         </div>
-      </div>
-      <div class="header-divider"></div>
-      <div class="header-title">
-        <div class="t1">Hasil Ujian</div>
-        <div class="t2">Tes Kemampuan Akademik — Pengindraan Jauh</div>
       </div>
     </div>
   </header>
@@ -1470,7 +1460,7 @@
       <div class="result-header">
         <div class="result-eyebrow">Laporan Hasil Ujian</div>
         <div class="result-title">Tes Kemampuan Akademik</div>
-        <div class="result-sub">Geografi — Materi Pengindraan Jauh · Kelas X</div>
+        <div class="result-sub">SMAN 3 Kasongan · Geografi — Pengindraan Jauh · Kelas X</div>
 
         <div class="score-display">
           <div class="score-ring" id="scoreRing">
@@ -1787,7 +1777,7 @@ function ringkas(txt, n) {
 }
 
 /* ============================================================
-   START EXAM — VALIDASI NAMA + KELAS SAJA
+   START EXAM
    ============================================================ */
 function startExam() {
   const name = document.getElementById('inpName').value.trim();
