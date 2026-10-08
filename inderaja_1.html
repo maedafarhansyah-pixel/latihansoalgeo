@@ -67,13 +67,21 @@
     gap: 12px;
     flex-shrink: 0;
   }
+  /* ---- LOGO SEKOLAH (BARU) ---- */
   .brand-logo {
-    width: 40px; height: 40px;
-    border-radius: 8px;
+    width: 46px; height: 46px;
+    border-radius: 50%;
     background: #fff;
     display: grid; place-items: center;
-    font-size: 1.2rem;
     flex-shrink: 0;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,.85);
+    box-shadow: 0 3px 10px rgba(0,0,0,.28);
+  }
+  .brand-logo img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
   }
   .brand-text { line-height: 1.2; }
   .brand-text .l1 {
@@ -174,6 +182,41 @@
     max-width: 760px;
     margin: 0 auto;
   }
+
+  /* ---- HERO LOGO (BARU) ---- */
+  .start-hero {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    color: #fff;
+  }
+  .start-hero-logo {
+    width: 84px; height: 84px;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: contain;
+    flex-shrink: 0;
+    border: 3px solid rgba(255,255,255,.9);
+    box-shadow: 0 6px 18px rgba(0,0,0,.3);
+  }
+  .start-hero-text h1 {
+    font-size: 1.15rem;
+    font-weight: 900;
+    letter-spacing: -0.4px;
+    line-height: 1.25;
+  }
+  .start-hero-text p {
+    font-size: 0.8rem;
+    color: #bfdbfe;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
   .card {
     background: #fff;
     border-radius: 12px;
@@ -1224,7 +1267,7 @@
 
   @media (max-width: 640px) {
     .header-inner { padding: 10px 14px; gap: 10px; flex-wrap: wrap; }
-    .brand-logo { width: 34px; height: 34px; font-size: 1rem; }
+    .brand-logo { width: 38px; height: 38px; }
     .brand-text .l2 { font-size: 0.82rem; }
     .header-divider { display: none; }
     .header-title { width: 100%; order: 3; }
@@ -1246,6 +1289,11 @@
     .review-item-head { flex-direction: column; gap: 8px; }
     .confirm-grid { gap: 7px; }
     .confirm-stat .v { font-size: 1.25rem; }
+
+    /* hero menyesuaikan layar kecil */
+    .start-hero { flex-direction: column; text-align: center; gap: 12px; padding: 18px 16px; }
+    .start-hero-logo { width: 92px; height: 92px; }
+    .start-hero-text h1 { font-size: 1.02rem; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -1263,7 +1311,11 @@
   <header class="exam-header">
     <div class="header-inner">
       <div class="brand">
-        <div class="brand-logo">🎓</div>
+        <!-- LOGO SEKOLAH -->
+        <div class="brand-logo">
+          <img src="logo-sman3.png" alt="Logo SMAN 3 Kasongan"
+               onerror="this.style.display='none';this.parentElement.innerHTML='🎓';">
+        </div>
         <div class="brand-text">
           <div class="l1">SMAN 3 Kasongan</div>
           <div class="l2">Simulasi TKA Geografi — Pengindraan Jauh</div>
@@ -1274,6 +1326,16 @@
 
   <div class="container">
     <div class="start-wrap">
+
+      <!-- HERO LOGO -->
+      <div class="start-hero">
+        <img src="logo-sman3.png" alt="Logo SMAN 3 Kasongan" class="start-hero-logo"
+             onerror="this.style.display='none';">
+        <div class="start-hero-text">
+          <h1>Simulasi TKA Geografi</h1>
+          <p>SMAN 3 Kasongan · Materi Pengindraan Jauh · Kelas X</p>
+        </div>
+      </div>
 
       <div class="card">
         <div class="card-head">
@@ -1362,7 +1424,10 @@
   <header class="exam-header">
     <div class="header-inner">
       <div class="brand">
-        <div class="brand-logo">🎓</div>
+        <div class="brand-logo">
+          <img src="logo-sman3.png" alt="Logo SMAN 3 Kasongan"
+               onerror="this.style.display='none';this.parentElement.innerHTML='🎓';">
+        </div>
         <div class="brand-text">
           <div class="l1">SMAN 3 Kasongan</div>
           <div class="l2">Simulasi TKA Geografi — Pengindraan Jauh</div>
@@ -1445,7 +1510,10 @@
   <header class="exam-header">
     <div class="header-inner">
       <div class="brand">
-        <div class="brand-logo">🎓</div>
+        <div class="brand-logo">
+          <img src="logo-sman3.png" alt="Logo SMAN 3 Kasongan"
+               onerror="this.style.display='none';this.parentElement.innerHTML='🎓';">
+        </div>
         <div class="brand-text">
           <div class="l1">SMAN 3 Kasongan</div>
           <div class="l2">Simulasi TKA Geografi — Pengindraan Jauh</div>
